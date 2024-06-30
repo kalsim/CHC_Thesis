@@ -2,12 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def mwu_update(weights, payoffs, epsilon):
-    """Update weights using Multiplicative Weights Update algorithm."""
     #return weights * np.exp(epsilon * payoffs)
     return weights * (1 + epsilon * payoffs)
 
 def run_experiment(epsilon_func, num_iterations=2500):
-    """Run the MWU algorithm for matching pennies game."""
     strategies = ['Heads', 'Tails']
     num_strategies = len(strategies)
     
